@@ -35,7 +35,11 @@
     // Repartir las cartas de forma inicial
     for ($i = 0; $i < 2; $i++) { // 2 cartas por jugador
         foreach ($players as $index => $player) {
-            $hands[$player][] = array_pop($deck); // Obtiene la última carta del mazo
+            $hands[$player][] = array_pop($deck); 
+            // Obtiene la última carta del mazo
+            // $hands[$player][] uso [] para indicar que quiero
+            // añadiar cosas a eso, ose esto significa que cada
+            // jugador tiene estas cartas.
         }
     }
     
