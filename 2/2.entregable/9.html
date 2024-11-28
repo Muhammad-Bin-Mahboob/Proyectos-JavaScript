@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validación de Fecha</title>
+</head>
+<body>
+  <h3>Introduce una fecha (DD/MM/YYYY):</h3>
+  <input type="text" id="inputFecha" placeholder="DD/MM/YYYY">
+  <button onclick="validarFecha()">Validar Fecha</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function validarFecha() {
+      const fecha = document.getElementById('inputFecha').value;
+
+      // Expresión regular para validar la fecha en formato DD/MM/YYYY
+      const regex = /^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[012])\/(\d{2}|\d{4})$/;
+
+      // Comprobamos si la fecha coincide con el formato esperado
+      if (regex.test(fecha)) {
+        document.getElementById('resultado').innerText = "La fecha es válida.";
+      } else {
+        document.getElementById('resultado').innerText = "La fecha es inválida. Debe ser en el formato DD/MM/YYYY.";
+      }
+    }
+  </script>
+</body>
+</html>
